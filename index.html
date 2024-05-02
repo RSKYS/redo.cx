@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AKA !red</title>
+    <!-- Favicon -->
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/74621759" type="image/x-icon" />
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <!-- Core theme CSS -->
+    <link rel="stylesheet" href="assets/style.css">
+  </head>
+
+  <body>
+
+    <script>
+      var audio = new Audio('assets/tdl.ogg')
+      var isPlaying
+
+      audio.onpause = function() {
+        isPlaying = false
+      }
+
+      audio.onplaying = function() {
+        isPlaying = true
+      }
+
+      function Play() {
+        isPlaying ? audio.pause() : audio.play()
+      }
+
+      Play()
+    </script>
+
+    <section class="animated-background">
+      <div id="stars1"></div>
+      <div id="stars2"></div>
+      <div id="stars3"></div>
+    </section>
+
+    <a id="profilePicture" href="#popup">
+      <img src="https://avatars.githubusercontent.com/u/74621759" alt="Profile Picture">
+    </a>
+
+    <div class="overlay" id="popup">
+      <div class="popup">
+        <div class="popup-photo">
+          <a href="https://avatars.githubusercontent.com/u/74621759" target="_blank">
+            <img src="https://avatars.githubusercontent.com/u/74621759" alt="Profile Picture">
+          </a>
+        </div>
+        <div class="popup-quote">
+          The Quieter You Become, The More You Are Able To Hear — Rumi
+        </div>
+        <a class="popup-close" onclick="history.back()">&times;</a>
+      </div>
+    </div>
+
+    <div id="userName">
+      @RSKYS
+    </div>
+
+    <div id="links">
+      <a class="link" href="https://github.com/RSKYS" target="_blank">
+        <i class="fab-github">&nbsp;</i>Github
+      </a>
+      <a class="link" href="https://www.youtube.com/channel/UCW8cWQXW-jVICN2SeUoldjw" target="_blank">
+        <i class="fab-youtube">&nbsp;</i>Youtube
+      </a>
+      <a class="link" onclick="Play()">
+        <i class="fab-music">&nbsp;</i>🎼 Play
+      </a>
+    </div>
+
+  </body>
+</html>
